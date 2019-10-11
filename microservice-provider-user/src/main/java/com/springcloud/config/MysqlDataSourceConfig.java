@@ -1,4 +1,4 @@
-package com.spring.cloud.config;
+package com.springcloud.config;
 
 import com.zaxxer.hikari.HikariDataSource;
 import lombok.extern.slf4j.Slf4j;

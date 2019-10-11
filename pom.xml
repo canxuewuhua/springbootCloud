@@ -14,6 +14,7 @@
 	<packaging>pom</packaging>
 	<modules>
 		<module>spring-boot-cloud-core</module>
+		<module>microservice-discovery-eureka</module>
 	</modules>
 	<dependencies>
 		<dependency>
@@ -188,5 +189,22 @@
 		</dependency>
 		<!-- apache poi end -->
 	</dependencies>
+
+	<!-- 引入spring cloud的依赖-->
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-dependencies</artifactId>
+				<version>Edgware.RELEASE</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<java.version>1.8</java.version>
+	</properties>
 
 </project>
