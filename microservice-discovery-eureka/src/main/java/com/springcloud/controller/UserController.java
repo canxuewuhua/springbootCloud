@@ -1,7 +1,6 @@
 package com.springcloud.controller;
 
 import com.springcloud.common.ResultDTO;
-import com.springcloud.util.ResultUtils;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -24,6 +23,9 @@ public class UserController {
 	@ResponseBody
 	public ResultDTO getUserName(){
 		ResultDTO resultDTO = new ResultDTO();
-		return ResultUtils.success();
+		resultDTO.setCode(100);
+		resultDTO.setMessage("成功！");
+		resultDTO.setData("用户信息");
+		return resultDTO;
 	}
 }
