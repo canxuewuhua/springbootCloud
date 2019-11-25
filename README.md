@@ -19,3 +19,6 @@
  
  # 拜托!面试不要再问我Spring Cloud底层原理
    参考网址：http://developer.51cto.com/art/201811/586513.htm
+   
+# 注意 ： 使用RestTemplate的方式调用远程的接口，和传统的RPC 有所区别
+ 
