@@ -19,7 +19,21 @@ public class UserController {
 	@Autowired
 	private RestTemplate restTemplate;
 
-	private static final String REST_URL_PREFIX = "http://localhost:8001/";
+	private static final String REST_URL_PREFIX = "http://MICROSERVICE-PROVIDER-USER";
+	/**
+	 *  用户信息
+	 * @return
+	 */
+	@ApiOperation(value="用户信息", notes="获取用户信息")
+	@RequestMapping(name = "获取用户信息", path = "/getUserInfo",method = RequestMethod.GET)
+	@ResponseBody
+	public ResultDTO getUserInfo(){
+		ResultDTO resultDTO = new ResultDTO();
+		resultDTO.setCode(100);
+		resultDTO.setMessage("成功信息！");
+		resultDTO.setData("用户信息");
+		return resultDTO;
+	}
 
 	/**
 	 *  用户信息
@@ -29,6 +43,6 @@ public class UserController {
 	@RequestMapping(name = "获取用户信息", path = "/getUserName",method = RequestMethod.GET)
 	@ResponseBody
 	public ResultDTO getUserName(){
-		return restTemplate.getForObject(REST_URL_PREFIX + "provider/getUserName",ResultDTO.class);
+		return restTemplate.getForObject(REST_URL_PREFIX + "/provider/getUserName",ResultDTO.class);
 	}
 }

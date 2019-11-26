@@ -7,8 +7,7 @@
 		<groupId>com.spingcloud</groupId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<artifactId>microservice-consumer-9001</artifactId>
-
+	<artifactId>microservice-discovery-eureka-7002</artifactId>
 	<properties>
 		<java.version>1.8</java.version>
 	</properties>
@@ -21,12 +20,7 @@
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-ribbon</artifactId>
-			<version>1.4.6.RELEASE</version>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-eureka</artifactId>
+			<artifactId>spring-cloud-starter-eureka-server</artifactId>
 			<version>1.4.6.RELEASE</version>
 		</dependency>
 	</dependencies>
@@ -54,7 +48,7 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<configuration>
 					<fork>true</fork>
-					<mainClass>com.springcloud.ConsumerApplication_9001</mainClass>
+					<mainClass>com.springcloud.EurekaServer_7002</mainClass>
 				</configuration>
 				<executions>
 					<execution>

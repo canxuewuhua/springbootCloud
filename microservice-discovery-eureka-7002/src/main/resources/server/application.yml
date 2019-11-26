@@ -1,15 +1,16 @@
-server:
-    port: 9001
 eureka:
-    client:
-        service-url:
-            defaultZone: http://localhost:7001/eureka/,http://localhost:7002/eureka/,http://localhost:7003/eureka/
-        register-with-eureka: false  # 不向Eureka注册自己
     instance:
-        ip-address: true
+       hostname: localhost
+    client:
+        fetch-registry: false
+        register-with-eureka: false
+        service-url:
+            defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+    server:
+        enable-self-preservation: false
+server:
+    port: 7002
 spring:
-    application:
-        name: microservice-provider-user
     datasource:
         hikari:
             connection-test-query: SELECT 1

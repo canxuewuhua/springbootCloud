@@ -16,6 +16,8 @@
 	<modules>
 		<module>microservice-api</module>
 		<module>microservice-discovery-eureka-7001</module>
+		<module>microservice-discovery-eureka-7002</module>
+		<module>microservice-discovery-eureka-7003</module>
 		<module>microservice-consumer-9001</module>
 		<module>microservice-provider-8001</module>
 	</modules>

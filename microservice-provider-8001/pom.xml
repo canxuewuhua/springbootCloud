@@ -46,7 +46,7 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<configuration>
 					<fork>true</fork>
-					<mainClass>com.springcloud.ProviderUserApplication</mainClass>
+					<mainClass>com.springcloud.ProviderUserApplication_8001</mainClass>
 				</configuration>
 				<executions>
 					<execution>
