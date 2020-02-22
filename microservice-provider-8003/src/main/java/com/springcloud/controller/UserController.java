@@ -40,9 +40,9 @@ public class UserController {
 		resultDTO.setMessage("成功！");
 
 		DeptVOExample deptVOExample = new DeptVOExample();
-		List<DeptVO> deptVOS = deptDAO.selectByExample(deptVOExample);
+		List<DeptVO> deptVOList = deptDAO.selectByExample(deptVOExample);
 
-		resultDTO.setData(deptVOS);
+		resultDTO.setData(deptVOList);
 		return resultDTO;
 	}
 	/**

@@ -3,7 +3,10 @@ package com.springcloud.controller;
 import com.springcloud.common.ResultDTO;
 import com.springcloud.domain.DeptVO;
 import com.springcloud.domain.DeptVOExample;
+import com.springcloud.domain.UserVO;
+import com.springcloud.domain.UserVOExample;
 import com.springcloud.mapper.DeptDAO;
+import com.springcloud.mapper.UserDAO;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.ServiceInstance;
@@ -40,9 +43,9 @@ public class UserController {
 		resultDTO.setMessage("成功！");
 
 		DeptVOExample deptVOExample = new DeptVOExample();
-		List<DeptVO> deptVOS = deptDAO.selectByExample(deptVOExample);
+		List<DeptVO> deptVOList = deptDAO.selectByExample(deptVOExample);
 
-		resultDTO.setData(deptVOS);
+		resultDTO.setData(deptVOList);
 		return resultDTO;
 	}
 	/**

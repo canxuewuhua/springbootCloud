@@ -7,8 +7,7 @@
 		<groupId>com.spingcloud</groupId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<artifactId>microservice-provider-8001</artifactId>
-
+	<artifactId>microservice-provider-8003</artifactId>
 
 	<dependencies>
 		<dependency>

@@ -36,7 +36,7 @@ public class MysqlDataSourceConfig {
     public SqlSessionFactory sqlSessionFactory(@Qualifier("dataplatformDataSource") DataSource dataSource) throws Exception {
         SqlSessionFactoryBean sessionFactoryBean = new SqlSessionFactoryBean();
         HikariDataSource hikariDataSource = (HikariDataSource) dataSource;
-        hikariDataSource.setJdbcUrl("jdbc:mysql://localhost:3306/db01?characterEncoding=utf-8&allowMultiQueries=true");
+        hikariDataSource.setJdbcUrl("jdbc:mysql://localhost:3306/db02?characterEncoding=utf-8&allowMultiQueries=true");
         hikariDataSource.setUsername("root");
         hikariDataSource.setPassword("123456");
         sessionFactoryBean.setDataSource(hikariDataSource);

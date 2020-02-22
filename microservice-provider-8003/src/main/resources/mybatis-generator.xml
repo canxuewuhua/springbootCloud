@@ -12,7 +12,7 @@
         </commentGenerator>
         <!--数据库链接地址账号密码-->
         <jdbcConnection driverClass="com.mysql.jdbc.Driver"
-                        connectionURL="jdbc:mysql://127.0.0.1:3306/db01?characterEncoding=utf8&amp;useSSL=false" userId="root"
+                        connectionURL="jdbc:mysql://127.0.0.1:3306/db03?characterEncoding=utf8&amp;useSSL=false" userId="root"
                         password="123456">
         </jdbcConnection>
         <javaTypeResolver>
