@@ -1,7 +1,7 @@
 package com.springcloud.controller;
 
-import com.springcloud.common.ResultDTO;
-import com.springcloud.service.DeptClientService;
+import com.kuang.common.ResultDTO;
+import com.kuang.service.DeptClientService;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -27,7 +27,7 @@ public class UserController {
 	 * @return
 	 */
 	@ApiOperation(value="用户信息", notes="获取用户信息")
-	@RequestMapping(name = "获取用户信息", path = "/getUserInfo",method = RequestMethod.GET)
+	@RequestMapping(name = "获取用户信息", path = "/getUserName",method = RequestMethod.GET)
 	@ResponseBody
 	public ResultDTO getUserInfo(){
 		return deptClientService.getUserName();

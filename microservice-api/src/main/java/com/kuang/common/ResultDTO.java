@@ -1,4 +1,4 @@
-package com.springcloud.common;
+package com.kuang.common;
 
 import lombok.Data;
 

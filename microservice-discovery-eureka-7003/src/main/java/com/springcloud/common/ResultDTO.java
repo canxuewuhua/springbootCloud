@@ -14,13 +14,13 @@ public class ResultDTO implements Serializable {
     private Object data;
 
     public ResultDTO() {
-        this.code = CodeMsg.SYSTEM_REQUEST_SUCCESS.getErrorCode();
+        this.code = com.kuang.common.CodeMsg.SYSTEM_REQUEST_SUCCESS.getErrorCode();
         this.message = "成功";
     }
 
     public ResultDTO(Object data) {
         this.data = data;
-        this.code = CodeMsg.SYSTEM_REQUEST_SUCCESS.getErrorCode();
+        this.code = com.kuang.common.CodeMsg.SYSTEM_REQUEST_SUCCESS.getErrorCode();
         this.message = "成功";
     }
 
@@ -31,6 +31,6 @@ public class ResultDTO implements Serializable {
     }
 
     public boolean checkSuccess() {
-        return CodeMsg.SYSTEM_REQUEST_SUCCESS.getErrorCode() == code;
+        return com.kuang.common.CodeMsg.SYSTEM_REQUEST_SUCCESS.getErrorCode() == code;
     }
 }

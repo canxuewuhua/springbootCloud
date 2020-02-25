@@ -1,12 +1,9 @@
 package com.springcloud.controller;
 
-import com.springcloud.common.ResultDTO;
+import com.kuang.common.ResultDTO;
 import com.springcloud.domain.DeptVO;
 import com.springcloud.domain.DeptVOExample;
-import com.springcloud.domain.UserVO;
-import com.springcloud.domain.UserVOExample;
 import com.springcloud.mapper.DeptDAO;
-import com.springcloud.mapper.UserDAO;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.ServiceInstance;

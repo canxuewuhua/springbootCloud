@@ -1,4 +1,4 @@
-package com.springcloud.dto;
+package com.kuang.dto;
 
 import lombok.Data;
 

@@ -1,7 +1,7 @@
 package com.springcloud.util;
 
-import com.springcloud.common.CodeMsg;
-import com.springcloud.common.ResultDTO;
+import com.kuang.common.CodeMsg;
+import com.kuang.common.ResultDTO;
 
 public class ResultUtils {
 

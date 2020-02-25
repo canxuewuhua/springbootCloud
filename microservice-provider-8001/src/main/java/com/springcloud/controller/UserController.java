@@ -1,6 +1,6 @@
 package com.springcloud.controller;
 
-import com.springcloud.common.ResultDTO;
+import com.kuang.common.ResultDTO;
 import com.springcloud.domain.DeptVO;
 import com.springcloud.domain.DeptVOExample;
 import com.springcloud.mapper.DeptDAO;

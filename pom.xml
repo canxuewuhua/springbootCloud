@@ -23,6 +23,7 @@
 		<module>microservice-provider-8002</module>
 		<module>microservice-provider-8003</module>
 		<module>microservice-consumer-feign</module>
+		<module>microservice-provider-hystrix-8001</module>
 	</modules>
 
 	<dependencies>

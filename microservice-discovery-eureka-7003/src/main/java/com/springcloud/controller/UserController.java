@@ -1,6 +1,6 @@
 package com.springcloud.controller;
 
-import com.springcloud.common.ResultDTO;
+import com.kuang.common.ResultDTO;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
