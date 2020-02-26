@@ -24,6 +24,8 @@
 		<module>microservice-provider-8003</module>
 		<module>microservice-consumer-feign</module>
 		<module>microservice-provider-hystrix-8001</module>
+		<module>microservice-consumer-hystrix-dashboard</module>
+		<module>microservice-zuul-9527</module>
 	</modules>
 
 	<dependencies>

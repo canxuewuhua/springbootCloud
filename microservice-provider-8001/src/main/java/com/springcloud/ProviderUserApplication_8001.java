@@ -13,5 +13,4 @@ public class ProviderUserApplication_8001 {
 	public static void main(String[] args) {
 		SpringApplication.run(ProviderUserApplication_8001.class, args);
 	}
-
 }

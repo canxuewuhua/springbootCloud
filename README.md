@@ -65,3 +65,24 @@
       服务降级 客户端 从整体网站请求负载考虑，当某个服务熔断或者关闭之后，服务将不再被调用 ,此时我们在客户端 可以准备一个
                       fallbackfactory，返回一个默认的值，整体的服务水平下降了，但是好歹能用
       服务熔断以及降级已经理解
+      
+      
+  #20200226 服务监控
+  Hystrix Dashboard 
+  写一个监控该页面，往里面放服务 
+  几个服务提供者需要添加监控的依赖
+  在ProviderHystrixApplication_8001类里面写一个servlet
+  测试结果：http://localhost:9003/hystrix 页面显示豪猪页面
+  http://localhost:8001/actuator/hystrix.stream 显示ping后的数据 monitor stream 显示图形的实时监控健康情况
+  一直loading中，没有看到实际的结果，可能哪里配置的不对，监控的整理先到这儿
+  
+  没看到实际结果，是因为：需要调用feign 服务API（即provider hystrix的controller），必须是hystrix的provider，再次查看界面
+  就可以了
+  #202002261751 Zuul路由网关
+  
+ 
+  路由网关很简单，只需要导入zuul的依赖，在ZuulApplication_9527启动类上开启 @EnableZuulProxy 注解
+  然后在yml文件中设置可以访问的url地址组成，将原有服务名进行转化为一个不是真实的名称，以便安全
+  也可以设置公共的前缀，比如：prefix: /qiang ，在原有的url再加上这个"/qiang"
+  
+  路由网关结束
