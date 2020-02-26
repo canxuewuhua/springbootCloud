@@ -45,5 +45,23 @@
    在Hystrix项目的启动类上添加上下面的注解
    @EnableCircuitBreaker // 添加对熔断的支持
    
-   202002251715实现了服务熔断，但是视频中消费者去调服务提供者，提供者使用api中的interface再去调服务者，没有调用
+   202002251715实现了服务熔断，但是视频中消费者去调服务提供者，提供者使用api中的interface再去调服务者，没有调通
    自己使用消费者去调服务提供者，在服务提供者的方法中添加 @HystrixCommand(fallbackMethod = "hystrixGet")去调用备用方法，成功
+    
+   # 20200226服务降级
+   服务降级在客户端  服务熔断在服务端
+   
+   服务降级功能已经实现
+   实现步骤为：
+   1、使用API项目DeptClientService接口中添加fallbackFactory = DeptClientServiceFallBackFactory.class
+   2、新写一个工厂类 DeptClientServiceFallBackFactory，该类的作用是：如果服务提供方突然服务宕机了，此时客户端会提示在工厂类
+      中写的提示，不至于服务瘫痪返回500
+   3、在consumer的feign项目中
+      启动类上添加（这是是关键，不然启动不了服务）
+      @ComponentScans(value =  { @ComponentScan(value = "com.kuang"), @ComponentScan(value = "com.springcloud")})
+      @ComponentScan 指定要扫描的package
+      
+      服务熔断 服务端  某个服务超时或者异常，引起熔断，类似保险丝
+      服务降级 客户端 从整体网站请求负载考虑，当某个服务熔断或者关闭之后，服务将不再被调用 ,此时我们在客户端 可以准备一个
+                      fallbackfactory，返回一个默认的值，整体的服务水平下降了，但是好歹能用
+      服务熔断以及降级已经理解

@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.GetMapping;
  * @date 2020/2/23 18:35
  */
 @Component
-@FeignClient(value = "MICROSERVICE-PROVIDER-USER")
+@FeignClient(value = "MICROSERVICE-PROVIDER-USER", fallbackFactory = DeptClientServiceFallBackFactory.class)
 public interface DeptClientService {
 
 	@GetMapping("/provider/getUserName")
